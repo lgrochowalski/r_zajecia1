@@ -11,7 +11,7 @@ getWeather <- GET(endpoint)
 
 getWeather$content
 weatherText <- content(getWeather, 'text')
-weatherJson <- fromJSON(weatherText, flatte = TRUE)
+weatherJson <- fromJSON(weatherText, flatten = TRUE)
 
 weatherDF <- as.data.frame(weatherJson)
 
